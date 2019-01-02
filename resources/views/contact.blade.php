@@ -51,30 +51,46 @@
                             <div class="card">
                                 <div class="card-header">Contact Us</div>
                                 <div class="card-body">
-                                    <form method="POST" action="http://localhost:8000/register">
-                                        <input type="hidden" name="_token" value="qzPxwZ4rrASbDUo7IkjXyO0jjIuqJzyRar7l82X5">
+                                    <form method="POST" action={{ action('ContactController@store') }}>
+                                        @csrf
+
                                         <div class="form-group row">
                                             <label for="name" class="col-md-4 col-form-label text-md-right">Your Name</label>
                                             <div class="col-md-6">
-                                                <input id="name" type="text" class="form-control" name="name" value="" required autofocus>
+                                                <input type="text" class="form-control" name="name" value="{{ old('name') }}" autofocus>
+                                                @if ($errors->has('name'))
+                                                    <span style="color: red" role="alert">
+                                                        <strong>{{ $errors->first('name') }}</strong>
+                                                    </span>
+                                                @endif
                                             </div>
                                         </div>
                                         <div class="form-group row">
                                             <label for="email" class="col-md-4 col-form-label text-md-right">E-Mail Address</label>
                                             <div class="col-md-6">
-                                                <input id="email" type="email" class="form-control" name="email" value="" required>
+                                                <input type="email" class="form-control" name="email" value="{{ old(' email') }}">
+                                                @if ($errors->has('email'))
+                                                    <span style="color: red" role="alert">
+                                                        <strong>{{ $errors->first('email') }}</strong>
+                                                    </span>
+                                                @endif
                                             </div>
                                         </div>
                                         <div class="form-group row">
                                             <label for="can_we_help" class="col-md-4 col-form-label text-md-right">Can we help?</label>
                                             <div class="col-md-6">
-                                                <textarea id="password" rows=5 cols=10 type="password" class="form-control" name="can_we_help"></textarea>
+                                                <textarea name="message" rows=5 cols=10 class="form-control" name="can_we_help">{{ old('message') }}</textarea>
+                                                @if ($errors->has('message'))
+                                                    <span style="color: red" role="alert">
+                                                        <strong>{{ $errors->first('message') }}</strong>
+                                                    </span>
+                                                @endif
                                             </div>
                                         </div>
                                         <div class="form-group row mb-0">
                                             <div class="col-md-6 offset-md-4">
                                                 <button type="submit" class="btn btn-primary">
-                                                Submit Contact
+                                                Submit Contact Form
                                                 </button>
                                             </div>
                                         </div>

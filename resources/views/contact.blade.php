@@ -59,7 +59,7 @@
                                             <div class="col-md-6">
                                                 <input type="text" class="form-control" name="name" value="{{ old('name') }}" autofocus>
                                                 @if ($errors->has('name'))
-                                                    <span style="color: red" role="alert">
+                                                    <span style="color: red; font-size: 12px" role="alert">
                                                         <strong>{{ $errors->first('name') }}</strong>
                                                     </span>
                                                 @endif
@@ -70,7 +70,7 @@
                                             <div class="col-md-6">
                                                 <input type="email" class="form-control" name="email" value="{{ old(' email') }}">
                                                 @if ($errors->has('email'))
-                                                    <span style="color: red" role="alert">
+                                                    <span style="color: red; font-size: 12px" role="alert">
                                                         <strong>{{ $errors->first('email') }}</strong>
                                                     </span>
                                                 @endif
@@ -81,7 +81,7 @@
                                             <div class="col-md-6">
                                                 <textarea name="message" rows=5 cols=10 class="form-control" name="can_we_help">{{ old('message') }}</textarea>
                                                 @if ($errors->has('message'))
-                                                    <span style="color: red" role="alert">
+                                                    <span style="color: red; font-size: 12px" role="alert">
                                                         <strong>{{ $errors->first('message') }}</strong>
                                                     </span>
                                                 @endif

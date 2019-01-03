@@ -19,5 +19,7 @@ class ContactController extends Controller
             'email' => 'required|email',
             'message' => 'required',
         ]);
+
+        return response('Form submitted with success.');
     }
 }

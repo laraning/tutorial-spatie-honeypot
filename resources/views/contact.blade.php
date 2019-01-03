@@ -53,7 +53,7 @@
                                 <div class="card-body">
                                     <form method="POST" action={{ action('ContactController@store') }}>
                                         @csrf
-
+                                        @honeypot
                                         <div class="form-group row">
                                             <label for="name" class="col-md-4 col-form-label text-md-right">Your Name</label>
                                             <div class="col-md-6">
@@ -109,11 +109,17 @@
                 </div>
             </main>
         </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script type="text/javascript">
             function spamBotFill(){
-                document.getElementById("name").value = 'John Smith';
-                document.getElementById("email").value = 'john.smith@spam.com';
-                document.getElementById("message").value = 'Test message from a spam bot!';
+
+                $( document ).ready(function() {
+                    $("*[name='name']").val("John Smith");
+                    $("*[name='email']").val("john.smith@spambot.com");
+                    $("*[name='message']").val("This is a message from a Spam Bot!");
+                    $("*[name='honeypot']").val("Ups, I filled this one too!");
+                });
+
             }
         </script>
     </body>

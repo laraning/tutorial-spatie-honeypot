@@ -57,7 +57,7 @@
                                         <div class="form-group row">
                                             <label for="name" class="col-md-4 col-form-label text-md-right">Your Name</label>
                                             <div class="col-md-6">
-                                                <input type="text" class="form-control" name="name" value="{{ old('name') }}" autofocus>
+                                                <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" autofocus>
                                                 @if ($errors->has('name'))
                                                     <span style="color: red; font-size: 12px" role="alert">
                                                         <strong>{{ $errors->first('name') }}</strong>
@@ -68,7 +68,7 @@
                                         <div class="form-group row">
                                             <label for="email" class="col-md-4 col-form-label text-md-right">E-Mail Address</label>
                                             <div class="col-md-6">
-                                                <input type="email" class="form-control" name="email" value="{{ old(' email') }}">
+                                                <input id="email" type="email" class="form-control" name="email" value="{{ old(' email') }}">
                                                 @if ($errors->has('email'))
                                                     <span style="color: red; font-size: 12px" role="alert">
                                                         <strong>{{ $errors->first('email') }}</strong>
@@ -79,7 +79,7 @@
                                         <div class="form-group row">
                                             <label for="can_we_help" class="col-md-4 col-form-label text-md-right">Can we help?</label>
                                             <div class="col-md-6">
-                                                <textarea name="message" rows=5 cols=10 class="form-control" name="can_we_help">{{ old('message') }}</textarea>
+                                                <textarea id="message" name="message" rows=5 cols=10 class="form-control" name="can_we_help">{{ old('message') }}</textarea>
                                                 @if ($errors->has('message'))
                                                     <span style="color: red; font-size: 12px" role="alert">
                                                         <strong>{{ $errors->first('message') }}</strong>
@@ -87,10 +87,17 @@
                                                 @endif
                                             </div>
                                         </div>
-                                        <div class="form-group row mb-0">
+                                        <div class="form-group row">
                                             <div class="col-md-6 offset-md-4">
                                                 <button type="submit" class="btn btn-primary">
                                                 Submit Contact Form
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <div class="col-md-6 offset-md-4">
+                                                <button type="button" onclick="javascript:spamBotFill();" class="btn btn-danger">
+                                                Spam bot form fill
                                                 </button>
                                             </div>
                                         </div>
@@ -102,5 +109,12 @@
                 </div>
             </main>
         </div>
+        <script type="text/javascript">
+            function spamBotFill(){
+                document.getElementById("name").value = 'John Smith';
+                document.getElementById("email").value = 'john.smith@spam.com';
+                document.getElementById("message").value = 'Test message from a spam bot!';
+            }
+        </script>
     </body>
 </html>

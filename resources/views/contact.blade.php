@@ -54,6 +54,7 @@
                                     <form method="POST" action={{ action('ContactController@store') }}>
                                         @csrf
                                         @honeypot
+
                                         <div class="form-group row">
                                             <label for="name" class="col-md-4 col-form-label text-md-right">Your Name</label>
                                             <div class="col-md-6">

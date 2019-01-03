@@ -72,8 +72,6 @@ class ComposerStaticInit691d200151bdbcefe597972e919dd5d5
             'Symfony\\Component\\Debug\\' => 24,
             'Symfony\\Component\\CssSelector\\' => 30,
             'Symfony\\Component\\Console\\' => 26,
-            'Spatie\\Snapshots\\' => 17,
-            'Spatie\\Honeypot\\' => 16,
         ),
         'R' => 
         array (
@@ -249,14 +247,6 @@ class ComposerStaticInit691d200151bdbcefe597972e919dd5d5
         'Symfony\\Component\\Console\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/console',
-        ),
-        'Spatie\\Snapshots\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/spatie/phpunit-snapshot-assertions/src',
-        ),
-        'Spatie\\Honeypot\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/spatie/laravel-honeypot/src',
         ),
         'Ramsey\\Uuid\\' => 
         array (
@@ -3434,21 +3424,6 @@ class ComposerStaticInit691d200151bdbcefe597972e919dd5d5
         'SebastianBergmann\\Timer\\RuntimeException' => __DIR__ . '/..' . '/phpunit/php-timer/src/RuntimeException.php',
         'SebastianBergmann\\Timer\\Timer' => __DIR__ . '/..' . '/phpunit/php-timer/src/Timer.php',
         'SebastianBergmann\\Version' => __DIR__ . '/..' . '/sebastian/version/src/Version.php',
-        'Spatie\\Honeypot\\EncryptedTime' => __DIR__ . '/..' . '/spatie/laravel-honeypot/src/EncryptedTime.php',
-        'Spatie\\Honeypot\\HoneypotServiceProvider' => __DIR__ . '/..' . '/spatie/laravel-honeypot/src/HoneypotServiceProvider.php',
-        'Spatie\\Honeypot\\HoneypotViewComposer' => __DIR__ . '/..' . '/spatie/laravel-honeypot/src/HoneypotViewComposer.php',
-        'Spatie\\Honeypot\\ProtectAgainstSpam' => __DIR__ . '/..' . '/spatie/laravel-honeypot/src/ProtectAgainstSpam.php',
-        'Spatie\\Honeypot\\SpamDetected' => __DIR__ . '/..' . '/spatie/laravel-honeypot/src/SpamDetected.php',
-        'Spatie\\Honeypot\\SpamResponder\\BlankPageResponder' => __DIR__ . '/..' . '/spatie/laravel-honeypot/src/SpamResponder/BlankPageResponder.php',
-        'Spatie\\Honeypot\\SpamResponder\\SpamResponder' => __DIR__ . '/..' . '/spatie/laravel-honeypot/src/SpamResponder/SpamResponder.php',
-        'Spatie\\Snapshots\\Driver' => __DIR__ . '/..' . '/spatie/phpunit-snapshot-assertions/src/Driver.php',
-        'Spatie\\Snapshots\\Drivers\\JsonDriver' => __DIR__ . '/..' . '/spatie/phpunit-snapshot-assertions/src/Drivers/JsonDriver.php',
-        'Spatie\\Snapshots\\Drivers\\VarDriver' => __DIR__ . '/..' . '/spatie/phpunit-snapshot-assertions/src/Drivers/VarDriver.php',
-        'Spatie\\Snapshots\\Drivers\\XmlDriver' => __DIR__ . '/..' . '/spatie/phpunit-snapshot-assertions/src/Drivers/XmlDriver.php',
-        'Spatie\\Snapshots\\Exceptions\\CantBeSerialized' => __DIR__ . '/..' . '/spatie/phpunit-snapshot-assertions/src/Exceptions/CantBeSerialized.php',
-        'Spatie\\Snapshots\\Filesystem' => __DIR__ . '/..' . '/spatie/phpunit-snapshot-assertions/src/Filesystem.php',
-        'Spatie\\Snapshots\\MatchesSnapshots' => __DIR__ . '/..' . '/spatie/phpunit-snapshot-assertions/src/MatchesSnapshots.php',
-        'Spatie\\Snapshots\\Snapshot' => __DIR__ . '/..' . '/spatie/phpunit-snapshot-assertions/src/Snapshot.php',
         'Symfony\\Component\\Console\\Application' => __DIR__ . '/..' . '/symfony/console/Application.php',
         'Symfony\\Component\\Console\\CommandLoader\\CommandLoaderInterface' => __DIR__ . '/..' . '/symfony/console/CommandLoader/CommandLoaderInterface.php',
         'Symfony\\Component\\Console\\CommandLoader\\ContainerCommandLoader' => __DIR__ . '/..' . '/symfony/console/CommandLoader/ContainerCommandLoader.php',
